@@ -1,5 +1,11 @@
 import streamlit as st
 st.title("Conversor de temperaturas")
-celsius = st.number_input("Grados Celsius")
-fahrenheit = celsius * 9 / 5+32
-st.write(f"{celsius} °C son {fahrenheit} °F")
+
+modo = st.radio("Conversor de :",["Celsius a Fahrenheit", "Fahrenheit a Celsius"])
+valor = st.number_input("Valor")
+if modo == "Celsius a Fahrenheit":
+    resultado = valor * 9/ 5+32
+    st.write(f"{valor} °C son {resultado} °F")
+else: 
+    resultado = (valor -32) * 5 / 9
+    st.write(f"{valor} °F son {resultado} °C")
