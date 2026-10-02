@@ -1,7 +1,7 @@
 import streamlit as st
 
 st.title("Conversor de temperaturas")
-
+st.write("Creado por Jonny")
 opciones = [
     "Celsius a Fahrenheit",
     "Fahrenheit a Celsius",
